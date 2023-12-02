@@ -7,7 +7,7 @@ import { useMediaQuery } from './hooks/useMediaQuery'
 import LargePicture from './components/LargePicture/LargePicture'
 
 function App() {
-  const [largePictureVisible, setLargePictureVisible] = useState(true)
+  const [largePictureVisible, setLargePictureVisible] = useState(false)
   const isMobile = useMediaQuery('(max-width: 480px)')
 
   const toggleImgPreview = () => {
