@@ -1,0 +1,32 @@
+.thumbnail_container {
+  position: relative;
+  border-radius: 10px;
+  height: 5.5rem;
+  width: 5.5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.thumbnail_container[data-selected="true"] {
+  outline: 2px solid var(--color-accent-primary)
+}
+
+.thumbnail_container[data-selected="true"]::after,
+.thumbnail_container:is(:hover, :focus)::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff88;
+}
+
+.thumbnail_container[data-selected="true"]::after {
+  background-color: #ffffffbf;
+}
+
+.thumbnail_container:is(:hover, :focus)::after {
+  background-color: #ffffff88;
+}
+
+.thumbnail_container img {
+  width: 5.5rem;
+}

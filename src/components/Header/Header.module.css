@@ -1,0 +1,143 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1110px;
+  border-bottom: 1px solid #e4e9f2;
+  padding-block: 20px;
+  padding-inline: 24px;
+}
+
+@media screen and (min-width: 948px) {
+  .header {
+    padding-top: 28px;
+    padding-bottom: 34px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .header {
+    padding-inline: 0;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media screen and (min-width: 948px) {
+  .nav {
+    gap: 57px;
+  }
+}
+
+.menu ul {
+  display: flex;
+  gap: 2rem;
+  color: var(--color-text-secondary);
+}
+
+.menu li {
+  cursor: pointer;
+}
+
+.menu li:is(:hover, :focus) {
+  color: var(--color-text-primary);
+}
+
+.menu ul span {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--color-accent-primary);
+}
+
+.menu_btn {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  height: fit-content;
+  width: fit-content;
+}
+
+@media screen and (max-width: 768px) {
+  .menu_container {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in;
+  }
+
+  .menu {
+    height: 100%;
+    width: 250px;
+    padding: 25px;
+    background-color: var(--color-bg-primary);
+    transition: transform 0.2s ease-in;
+  }
+
+  .menu ul {
+    margin-top: 54px;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-text-primary);
+  }
+}
+
+.cart_img {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.cart_img img {
+  width: 24px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.cart_img img:is(:hover, :focus) {
+  outline: 2px solid var(--color-accent-primary);
+}
+
+@media screen and (min-width: 948px) {
+  .cart_img {
+    gap: 46px;
+  }
+
+  .cart_img button:not(:hover, :focus) path {
+    fill: #69707D;
+  }
+
+  .cart_img img {
+    width: 50px;
+  }
+}
+
+.cart {
+  position: relative;
+  background-color: transparent;
+  border: none;
+}
+
+.qty {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 19px;
+  height: 13px;
+  color: white;
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: bold;
+  background-color: var(--color-accent-primary);
+  border-radius: 13px;
+}

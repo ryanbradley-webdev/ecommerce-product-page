@@ -1,0 +1,25 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+main {
+  display: grid;
+  width: 100%;
+  max-width: 1158px;
+}
+
+@media screen and (min-width: 948px) {
+  #root {
+    padding-inline: 24px;
+  }
+
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding-block: 90px;
+  }
+}

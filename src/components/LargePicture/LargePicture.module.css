@@ -1,0 +1,68 @@
+.container {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background-color: #000000bc;
+}
+
+.img_container {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+}
+
+.close_btn {
+  display: block;
+  height: 20px;
+  width: 20px;
+  margin-left: auto;
+  margin-bottom: 24px;
+  background-color: transparent;
+  border: none;
+}
+
+.close_btn path {
+  fill: #D8D8D8;
+}
+
+.close_btn:is(:hover, :focus) path {
+  fill: var(--color-accent-primary);
+}
+
+.selected_img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: space-between;
+  max-width: 445px;
+  margin-inline: auto;
+  margin-top: 32px;
+}
+
+.nav_btn {
+  position: absolute;
+  top: 299px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: none;
+  background-color: var(--color-bg-primary);
+}
+
+.nav_btn[data-type="Prev"] {
+  left: -20px;
+}
+
+.nav_btn[data-type="Next"] {
+  right: -20px;
+}
+
+.nav_btn:is(:hover, :focus) path {
+  stroke: var(--color-accent-primary);
+}
